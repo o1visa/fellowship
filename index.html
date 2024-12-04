@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Extraordinary Fellowship</title>
+  <meta name="description" content="We work with entrepreneurs and forward-looking companies to transform ideas into products that HELP, CHALLENGE, and INSPIRE. Got an idea? Call us 02 96902592.">
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Feel - A Digital Solutions Business">
+<meta property="og:url" content="https://extraordinary.dev">
+<meta property="fb:app_id" content="466690410343011" />
+<meta property="og:description" content="We work with entrepreneurs and forward-looking companies to transform ideas into products that HELP, CHALLENGE, and INSPIRE. Got an idea? Call us 02 96902592.">
+<meta property="og:image" content="https://feel.com.au/images/wemakepeoplefeel.jpg">
+<meta property="business:contact_data:street_address" content="18a/617 Elizabeth Street">
+<meta property="business:contact_data:locality" content="Redfern">
+<meta property="business:contact_data:region" content="NSW">
+<meta property="business:contact_data:postal_code" content="2016">
+<meta property="business:contact_data:country_name" content="Australia">
+<link rel="icon" type="image/x-icon" href="https://feel.com.au/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+  <link rel="stylesheet" href="css/ionicons.css">
+  <link rel="stylesheet" href="css/bootstrap-extended.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script type="text/javascript" src="js/three.min.js" defer></script>
+  <script type="text/javascript" src="js/detector.js" defer></script>
+  <script id="vs" type="x-shader/x-vertex" defer>
+    varying vec2 vUv;
+    void main() {
+      vUv = uv;
+      gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+    }
+  </script>
+
+  <script id="fs" type="x-shader/x-fragment" defer>
+    uniform sampler2D map;
+    uniform vec3 fogColor;
+    uniform float fogNear;
+    uniform float fogFar;
+
+    varying vec2 vUv;
+    void main() {
+
+      float depth = gl_FragCoord.z / gl_FragCoord.w;
+      float fogFactor = smoothstep( fogNear, fogFar, depth );
+
+      gl_FragColor = texture2D( map, vUv );
+      gl_FragColor.w *= pow( gl_FragCoord.z, 20.0 );
+      gl_FragColor = mix( gl_FragColor, vec4( fogColor, gl_FragColor.w ), fogFactor );
+    }
+  </script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" defer></script>
+  <script type="text/javascript">window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" defer></script>
+  <script src="js/jquery.main.js" defer></script>
+  <!--[if IE]>
+  <style>
+      #clouds{
+           display: none!important;
+      }
+      .cloud-holder {
+          display:block!important;
+      }
+  </style>
+  <![endif]-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-21711145-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-21711145-1', { 'optimize_id': 'GTM-KLN4WBJ'});
+</script>
+<!--GET SITE CONTROL POPUP-->
+<script type="text/javascript" async
+  src="//l.getsitecontrol.com/d7o31z7e.js">
+</script>
+<!--END GET SITE CONTROL POPUP-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YL2LKNDW37"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YL2LKNDW37');
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHLN1T92PF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KHLN1T92PF');
+
+  gtag('event', 'only_for_3rd_party', {'send_to': 'G-KHLN1T92PF'});
+</script>
+<style>
+    .honeypot {
+      display: none;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var form = document.forms['contact_form'];
+      var honeypot = document.createElement('input');
+      honeypot.type = 'text';
+      honeypot.name = 'honeypot';
+      honeypot.className = 'honeypot';
+      honeypot.value = '';
+      form.appendChild(honeypot);
+
+      var formStartTime = document.createElement('input');
+      formStartTime.type = 'hidden';
+      formStartTime.name = 'form_start_time';
+      formStartTime.value = Math.floor(Date.now() / 1000); // current timestamp
+      form.appendChild(formStartTime);
+
+      form.onsubmit = function() {
+        return validateForm(form);
+      }
+    });
+
+    function validateForm(form) {
+      // Honeypot field validation
+      if (form.honeypot.value !== '') {
+        alert('Spam detected!');
+        return false; // Prevent form submission
+      }
+
+      // Additional client-side validation can be added here
+
+      return true; // Allow form submission
+    }
+  </script><style>
+    .honeypot {
+      display: none;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var form = document.forms['contact_form'];
+      var honeypot = document.createElement('input');
+      honeypot.type = 'text';
+      honeypot.name = 'honeypot';
+      honeypot.className = 'honeypot';
+      honeypot.value = '';
+      form.appendChild(honeypot);
+
+      var formStartTime = document.createElement('input');
+      formStartTime.type = 'hidden';
+      formStartTime.name = 'form_start_time';
+      formStartTime.value = Math.floor(Date.now() / 1000); // current timestamp
+      form.appendChild(formStartTime);
+
+      form.onsubmit = function() {
+        return validateForm(form);
+      }
+    });
+
+    function validateForm(form) {
+      // Honeypot field validation
+      if (form.honeypot.value !== '') {
+        alert('Spam detected!');
+        return false; // Prevent form submission
+      }
+
+      // Additional client-side validation can be added here
+
+      return true; // Allow form submission
+    }
+  </script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
+</head>
+<body class="homepage" data-spy="scroll" data-target="#nav">
+  <div id="wrapper">
+    <main id="main" role="main">
+      <section class="top-inforamtiom">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 column">
+              <div class="text-block">
+                <div class="text-wrapper">
+                  <div class="holder">
+                    <!--h1>We build transformative experiences</h1-->
+                    <h1>The Extraordinary Fellowship</h1>
+                    <p>$25,000+ for indiviudals with extraordinary technical ability </p>
+                  </div>
+                  <div class="austronaut">
+                    <picture >
+                      <!--[if IE 9]><video style="display: none;"><![endif]-->
+                      <source srcset="images/image-astronaut-small.png, images/image-astronaut-small-2x.png 2x" media="(max-width: 767px)">
+                      <source srcset="images/image-astronaut.png">
+                      <!--[if IE 9]></video><![endif]-->
+                      <img src="images/image-astronaut.png" alt="image description">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <canvas id="canvas"></canvas>
+      </section>
+      <section class="content-cols" id="What-we-do">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-5 col-sm-offset-1 title-col">
+              <h2>$25,000+</h2>
+              <h2>$1k in H100 Compute</h2>
+              <h2>It's time to build.</h2>
+            </div>
+            <div class="col-xs-12 col-sm-5 description">
+              	<p>Every year, 10 extraordinary individuals receive $25,000+ to work on important technical problems.</p>
+                <p>We look for ambitious technical individuals with a positive second derivative of growth.</p>
+                <p>Fellows will meet the best Silicon Valley mentors and collaborate alongside other fellows.</p>
+                <p>Supported by Naval Ravikant, Extraordinary.club, and a16z.</p>
+                <p><a href="https://join.extraordinary.dev" target="_blank">apply</a></p>
+            </div>
+          </div>
+        </div>
+        <div id="clouds"></div>
+        <div class="cloud-holder">
+         <img src="images/clouds.png" alt="image description" width="1768" height="522">
+       </div>
+      </section>
+  </div>
+  <script>
+      window.fbMessengerPlugins = window.fbMessengerPlugins || {
+        init: function () {
+          FB.init({
+            appId            : '1678638095724206',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v3.0'
+          });
+        }, callable: []
+      };
+      window.fbAsyncInit = window.fbAsyncInit || function () {
+        window.fbMessengerPlugins.callable.forEach(function (item) { item(); });
+        window.fbMessengerPlugins.init();
+      };
+      setTimeout(function () {
+        (function (d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) { return; }
+          js = d.createElement(s);
+          js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      }, 0);
+      </script>
+
+      <div
+        class="fb-customerchat"
+        page_id="170378733070354"
+        theme_color="#000000"
+        ref="feel-chat">
+
+      </div>
+
+</body>
+</html>
